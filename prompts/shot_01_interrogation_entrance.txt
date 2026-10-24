@@ -1,0 +1,45 @@
+# ==============================================================================
+# SHOT 01: INTERROGATION ROOM ENTRANCE & SEATING
+# Shot Type Metadata:
+#   shot_type: WIDE_MASTER_ESTABLISHING
+#   wide_shot_present: true
+#   seed_video_role: NONE (Initial generation)
+#   seed_ref_video_role: NONE
+#   is_master_spatial_anchor: true
+# ==============================================================================
+
+Style_definitions:
+keep same style,
+grounded live-action crime drama film aesthetic with crisp organic texture.
+cool blue-toned institutional lighting with desaturated shadows.
+Arri Alexa 35 cinema camera with 50mm prime lens, shallow depth of field.
+
+subject_definitions:
+<Subject 1> is Detective Vance in @Image1. consistent this is the single person in @Image1, with exactly the appearance of @Image1, unchanged in every shot.
+
+<Subject 2> is Sato in @Image2. consistent he is the single person in @Image2, with exactly the appearance of @Image2, unchanged in every shot.
+
+<Subject 3> is Officer Davis in @Image3. consistent he is the single person in @Image3, with exactly the appearance of @Image3, unchanged in every shot.
+
+<Subject 4> is the interrogation room location in @Image4. Build the environment from @Image4.
+
+summary:
+Officer Davis opens the door for Detective Vance, who enters the interrogation room; Davis exits and shuts the door, and Vance sits across from Sato to question him, with Sato watching silently.
+
+retention_analysis:
+@Image4 fully preserved - the interrogation room backdrop is reproduced from this image.
+
+detailed_description:
+The environment.
+
+Every defined subject keeps exactly the appearance of its own reference image throughout the video, unchanged and identical on both sides of every cut, without drifting, morphing, or exchanging anything with another subject, and each defined subject appears exactly once in any frame, with no duplicate, mirrored or leftover copy visible at the same time. The door and every object keep their exact shape and never merge with any body; there is only one door, it stays mounted in its frame on its hinges, and no second door, copy of it, or loose panel ever appears. Movement throughout is natural and grounded for every subject, with realistic weight transfer and follow-through, and no jittery, floating, or impossible motion.
+
+[continuation shot]: At 00:01.500, medium-wide shot of <Subject 4> framing <Subject 2> seated at the table and the room's single door in clear view, maintaining scale continuity from the prior footage without a distant wide snap. <Subject 3> stands beside the door, reaches out, turns the handle, and smoothly opens the door halfway while stepping back to maintain open clearance from its swing. <Subject 1>, the detective, steps through the doorway into the room, clearing the doorframe with visible space between him and <Subject 3>. <Subject 2> remains seated at the table, watching. Only <Subject 1>, <Subject 2>, and <Subject 3> are visible; no other figure appears in frame. The camera holds steady with subtle tracking. By the end of the shot <Subject 1> is inside the room, <Subject 3> holds the door open, and <Subject 2> stays seated.
+
+[continuation shot]: At 00:04.200, the medium-wide shot continues smoothly as the camera gently reframes toward the table without a cut. <Subject 3> steps forward through the doorway, turns back to grip the outside handle, and pulls the door shut until the latch engages, leaving <Subject 3> outside and unseen. Simultaneously, <Subject 1> walks at an unhurried, measured pace to the empty chair across from <Subject 2>, pulls out the chair slightly, and lowers into the seat. Only <Subject 1> and <Subject 2> are visible once the door latches. The camera eases in closer to a medium two-shot across the table. By the end of the shot <Subject 1> is seated across from <Subject 2>, and <Subject 3> remains unseen.
+
+overall_soundscape:
+The ambient environment sound and atmosphere continue uninterrupted and at consistent volume. The door latch clicks open followed by firm footsteps entering the room. The door pulls shut with a solid latching sound, accompanied by the muffled scrape of a chair across the floor as Vance sits.
+
+non_diegetic_music:
+N/A

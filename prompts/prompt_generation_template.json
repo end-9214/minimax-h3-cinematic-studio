@@ -1,0 +1,58 @@
+{
+  "system_prompt_reference": "prompts/system_prompt.md",
+  "input_example": {
+    "project_name": "Interrogation_Room_Drama",
+    "shot_index": 2,
+    "scene_objective": "Detective Vance aggressively confronts Sato regarding his whereabouts, and Sato scoffs and claims innocence.",
+    "previous_shot_summary": "Officer Davis opened the door, Detective Vance entered the room, Davis closed the door and stepped outside, Vance sat across the metal table from Sato.",
+    "characters_present": [
+      {
+        "id": "<Subject 1>",
+        "name": "Detective Vance",
+        "reference": "@Image1",
+        "status": "Seated across table, speaking first"
+      },
+      {
+        "id": "<Subject 2>",
+        "name": "Sato",
+        "reference": "@Image2",
+        "status": "Seated at table in plaid shirt, responding defensively"
+      }
+    ],
+    "environment": {
+      "id": "<Subject 4>",
+      "name": "Interrogation Room",
+      "reference": "@Image4"
+    },
+    "dialogue": {
+      "audio_file": "elevenlabs_hindi_interrogation_dialogue.wav",
+      "total_duration_seconds": 5.94,
+      "lines": [
+        {
+          "speaker": "<Subject 1>",
+          "language": "Hindi",
+          "text": "तुझे पता भी है तूने क्या कर दिया है?",
+          "timestamp_start": "00:00.100",
+          "timestamp_end": "00:01.900"
+        },
+        {
+          "pause_reaction": "Tense silence, Sato's jaw clenches",
+          "timestamp_start": "00:01.900",
+          "timestamp_end": "00:03.600"
+        },
+        {
+          "speaker": "<Subject 2>",
+          "language": "Hindi",
+          "text": "अबे मैंने तो कुछ भी नहीं किया।",
+          "timestamp_start": "00:03.600",
+          "timestamp_end": "00:05.540"
+        }
+      ]
+    },
+    "shot_type_strategy": {
+      "wide_shot_present": false,
+      "seed_video": "Shot_01_Video_Tail",
+      "seed_ref_video": "Shot_01_Wide_Master"
+    }
+  }
+}

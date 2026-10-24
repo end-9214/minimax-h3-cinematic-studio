@@ -1,0 +1,63 @@
+# ==============================================================================
+# SHOT 02: TENSE HINDI INTERROGATION DIALOGUE (LIP-SYNC & CLOSE-UP BEAT)
+# Shot Type Metadata:
+#   shot_type: MEDIUM_TWO_SHOT_AND_CLOSE_UP
+#   wide_shot_present: false
+#   seed_video_role: SHOT_01_TAIL (Immediate temporal continuation)
+#   seed_ref_video_role: SHOT_01_WIDE_MASTER (Spatial / Environment Anchor)
+#   is_master_spatial_anchor: false
+# ==============================================================================
+
+Style_definitions:
+keep same style,
+grounded live-action crime drama film aesthetic with crisp organic texture.
+cool blue-toned institutional lighting with desaturated shadows.
+Arri Alexa 35 cinema camera with 50mm prime lens, shallow depth of field.
+
+subject_definitions:
+<Subject 1> is Detective Vance in @Image1. This is a completely distinct character with the exact face, mature features, hairstyle, and appearance of @Image1. He does NOT resemble or share features with Officer Davis (<Subject 3>). Unchanged in every shot.
+
+<Subject 2> is Sato in @Image2. He is the suspect seated at the table wearing the blue plaid collared shirt, with the exact appearance of @Image2, unchanged in every shot.
+
+<Subject 3> is Officer Davis in @Image3. He is the standing security guard stationed beside the door, with the exact appearance and uniform of @Image3 and @Video1, unchanged in every shot.
+
+<Subject 4> is the interrogation room location in @Image4. Institutional bare concrete walls, single metal table, two chairs, overhead hanging lamp, and single steel entrance door.
+
+[Reference Continuity: @Video1]
+
+Source Reference: Use @Video1 as the continuous anchor for the interrogation room environment (<Subject 4>), Sato's position at the table (<Subject 2>), and Officer Davis standing beside the door (<Subject 3>).
+
+Character Continuity: 
+- For Sato (<Subject 2>) and Officer Davis (<Subject 3>): strictly preserve their exact facial structure, hairstyle, and wardrobe established in @Video1.
+- For Detective Vance (<Subject 1>): this is a NEW character entering the scene from outside. He MUST strictly take his facial identity, hair, and wardrobe exclusively from @Image1, with zero blending or resemblance to Officer Davis (<Subject 3>).
+
+Environment & Set: Retain the identical concrete background environment, architectural layout, table position, hanging lamp, and door geometry established in @Video1.
+
+Props & Set Dressing: Keep the metal table, ashtray, chairs, and door hardware from @Video1 intact without alteration.
+
+Lighting & Tone: Match the exact cool institutional palette, overhead practical lighting, and moody shadows from @Video1.
+
+Sound & Voice Continuity: Preserve the ambient room hum and room tone from @Video1. The incoming dialogue carries distinct vocal acoustics inside the concrete room.
+
+summary:
+[reference generation + video continuation] Across the metal table in the interrogation room, Detective Vance leans forward and sternly questions Sato in Hindi, saying "तुझे पता भी है तूने क्या कर दिया है?", followed by a tense pause as Sato scoffs and defensively replies in Hindi, "अबे मैंने तो कुछ भी नहीं किया।"
+
+retention_analysis:
+@Image4 and @Video1 fully preserved - the concrete room, table, door, and Sato's seated position continue seamlessly from the anchor footage.
+
+detailed_description:
+The environment.
+
+Every defined subject keeps exactly the appearance of its own reference image throughout the video, unchanged and identical on both sides of every cut, without drifting, morphing, or exchanging identity with another subject. Detective Vance (<Subject 1>) and Officer Davis (<Subject 3>) remain two completely separate, distinct individuals at all times. Each defined subject appears exactly once in any frame, with no duplicate or ghost copy. Movement throughout is natural and grounded with realistic weight and cinematic pacing.
+
+[continuation shot]: At 00:00.100, medium two-shot across the metal table in <Subject 4>. <Subject 1> (Detective Vance) sits across from <Subject 2> (Sato). <Subject 1> leans slightly forward onto the table, his eyes locked onto <Subject 2>, and in a stern, authoritative voice says in Hindi: "तुझे पता भी है तूने क्या कर दिया है?" His lips and jaw articulate each syllable precisely from 00:00.100 to 00:01.900. <Subject 2> keeps his mouth tightly shut, staring back with guarded defensiveness.
+
+[continuation shot]: At 00:01.900, camera subtly pushes in as <Subject 1> finishes his sentence and closes his mouth, holding a deadpan, intense stare. For 1.7 seconds, heavy silence hangs in the room. <Subject 2>'s jaw clenches and his eyes flicker with rising irritation, swallowing hard while keeping silent.
+
+[continuation shot]: At 00:03.600, <Subject 2> (Sato) leans forward defensively in his chair, furrowing his brow and shaking his head dismissively, saying in an agitated Hindi voice: "अबे मैंने तो कुछ भी नहीं किया।" His jaw moves rapidly with the natural cadence of the words from 00:03.600 to 00:05.540, his lips pressing into a taut line as the line finishes. <Subject 1> remains motionless, absorbing the response without speaking.
+
+overall_soundscape:
+The room's low fluorescent hum and institutional reverb carry the dialogue. Vance's authoritative Hindi voice cuts through cleanly, followed by the quiet friction of Sato shifting in the metal chair during the brief pause, before Sato's sharper, defensive Hindi response resonates in the enclosed space.
+
+non_diegetic_music:
+N/A

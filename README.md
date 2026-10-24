@@ -10,7 +10,7 @@ This repository contains the complete end-to-end framework, ComfyUI workflows, c
 
 ```
 minimax-h3-cinematic-studio/
-├── README.md                                  # This documentation
+├── README.md                                  # Complete architecture & continuity guide
 ├── prompts/
 │   ├── system_prompt.md                       # Master LLM System Prompt for automated scene generation
 │   ├── shot_01_interrogation_entrance.txt     # Shot 1: Master Establishing Entrance & Seating
@@ -20,7 +20,7 @@ minimax-h3-cinematic-studio/
 │   ├── 01_MiniMaxH3_Generation_Workflow.json              # Base generation workflow (Shot 1)
 │   ├── 02_MiniMaxH3_Continuation_Workflow.json            # Standard latent continuation & auto-stitch
 │   ├── 03_MiniMaxH3_Continuation_Completed.json           # Fully configured production continuation
-│   └── 04_MiniMaxH3_Continuation_CloseUp_MasterRef.json   # Dual-seed (Tail + Master Wide Anchor)
+│   └── 04_MiniMaxH3_Continuation_CloseUp_MasterRef.json   # Dual-Seed (Tail + Master Wide Anchor)
 ├── assets/
 │   ├── characters/
 │   │   ├── sato_suspect_character_sheet.jpg               # Subject 2: Sato (Plaid shirt suspect)
@@ -33,17 +33,37 @@ minimax-h3-cinematic-studio/
 │   │   └── elevenlabs_hindi_interrogation_dialogue.wav    # Studio ElevenLabs 5.94s Hindi dialogue track
 │   └── latents/
 │       └── sato_scene-001_00001.h3latent.safetensors      # Lossless AV latent from Shot 1
-└── results/
-    ├── MiniMaxH3_Stitched_00001_MasterScene.mp4           # 17-second final master stitched continuous scene
-    ├── MiniMaxH3_Easy_00001_Shot1.mp4                     # Shot 1 standalone entrance
-    └── MiniMaxH3_Easy_00007_DialogueBeat.mp4              # Shot 2 standalone dialogue & reaction beat
+├── results/
+│   ├── MiniMaxH3_Stitched_00001_MasterScene.mp4           # 17-second final master stitched continuous scene
+│   ├── MiniMaxH3_Easy_00001_Shot1.mp4                     # Shot 1 standalone entrance
+│   └── MiniMaxH3_Easy_00007_DialogueBeat.mp4              # Shot 2 standalone dialogue beat
+└── examples/
+    └── microdrama_tiger_monkey/                           # 3D Clay Animation Comedy Microdrama
+        ├── character.md                                   # 16:9 3-view turnaround specs (Sheru & Cheeku)
+        ├── script.md                                      # 4-part comedy script (every part ends on cliffhanger)
+        ├── characters/                                    # 16:9 turnaround character sheets
+        ├── environment/                                   # 16:9 jungle clearing plate
+        ├── audio/                                         # Audio scripts with emotional direction tags
+        └── prompts/                                       # Fully calibrated Shot 1 & Shot 2 prompts
 ```
 
 ---
 
-## 🎬 Core Continuity Methodology
+## 🌟 THE GOLDEN RULES OF MINIMAX-H3 CONTINUITY
 
-### 1. The Dual-Seed Anchor Strategy (Preventing Close-Up Drift)
+### 1. The "Slot 1 Priority Law" for New Entering Characters 🚨
+In MiniMax H3, reference image slots are **NOT equal**. As logged by the engine:
+> `[MiniMax H3 Easy] Reference image order (slot 1 is read first and asserts hardest): <Picture 1> = Ref Image 1 (strength 1.00)`
+
+- **The Problem:** If you introduce a **NEW character** into Shot 2 or Shot 3, and you put them in Slot 2, 3, or 4, the returning anchor characters from `@Video1` will overpower their features, causing the AI to copy or bleed the returning character's face onto the new character!
+- **The Golden Rule:** **Whenever a NEW character enters the scene, you MUST place their reference image in Slot 1 (`@Image1` / `<Subject 1>`)!**
+  - **Slot 1 (`@Image1` / `<Subject 1>`):** The NEW entering character (asserts hardest).
+  - **Slot 2 (`@Image2` / `<Subject 2>`):** The returning character from `@Video1`.
+  - **Slot 3 (`@Image3` / `<Subject 3>`):** The environment location plate.
+
+---
+
+### 2. The Dual-Seed Anchor Strategy (Preventing Close-Up Drift)
 When filming multi-shot scenes in generative video, a major challenge is **spatial drift**: if Shot 2 is composed entirely of close-ups and over-the-shoulder cuts, the AI model loses track of the overall room layout and door position.
 
 To solve this, our framework introduces **Dual-Seed Video Routing**:
@@ -67,19 +87,6 @@ Every shot prompt is explicitly tagged in its header:
 
 ---
 
-### 2. The Anti-Bleed Rule for New Entering Characters
-When a new character enters a scene (e.g., Detective Vance entering an interrogation room where the Guard is already standing):
-- **Problem:** If the prompt simply says `preserve character features from @Video1`, the AI will copy the Guard's face onto the Detective because only the Guard existed in Video 1!
-- **Solution:** Explicitly split your `Character Continuity` prompt section:
-```text
-Character Continuity:
-- For returning characters (Sato & Davis): strictly preserve facial structure and wardrobe from @Video1.
-- For new characters (Detective Vance): strictly take facial identity exclusively from @Image1. 
-  He is a NEW character and must NEVER blend or share features with Officer Davis (<Subject 3>).
-```
-
----
-
 ### 3. Sub-Second Audio & Dialogue Synchronization
 MiniMax H3 is a multimodal Audio-Video model. To achieve believable lip synchronization:
 1. **Timecoded Action Beats:** Use `[continuation shot]: At MM:SS.mmm` matching the audio waveform.
@@ -94,34 +101,14 @@ MiniMax H3 is a multimodal Audio-Video model. To achieve believable lip synchron
 
 Open [`prompts/system_prompt.md`](file:///home/ubuntu/minimax-h3-cinematic-studio/prompts/system_prompt.md) and paste it into **ChatGPT (GPT-4o)**, **Claude 3.5 Sonnet**, or **Gemini 1.5 Pro**.
 
-Then, simply provide your scene input in this format:
-
-```text
-Current Scene Objective:
-Detective Vance slams his hands on the table and presents a photograph as evidence. Sato recoils and averts his gaze.
-
-Previous Scene Summary:
-Vance questioned Sato about who he was with, and Sato claimed he didn't do anything. Both are seated across the metal table.
-
-Dialogue Script (if any):
-[00:00.20 - 00:02.10] Vance: "Then explain what you were doing at the docks!"
-[00:02.10 - 00:03.50] (Tense pause)
-[00:03.50 - 00:05.20] Sato: "That's not me. You're setting me up."
-
-Shot Framing:
-Medium Close-Up on table and hands, cutting to Sato's face (no wide shot present).
-```
-
-The LLM will automatically generate the 100% compliant, timecoded, dual-anchor prompt ready to paste directly into ComfyUI!
+The system prompt automatically enforces:
+- Slot 1 priority for new characters.
+- Dual-seed video routing (`seed_video` + `seed_ref_video`).
+- Timecoded dialogue lip-sync blocks.
 
 ---
 
-## ⚡ Hardware & Performance Recommendations (NVIDIA L40S / 48GB)
-
-To prevent CUDA OOMs and maintain fast iteration speeds:
-1. **PyTorch Memory Config:**
-   ```bash
-   export PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True"
-   ```
-2. **VRAM Offload Headroom:** Launch ComfyUI with `--reserve-vram 16.0` to automatically park the 14.6 GB Text Encoder into system RAM during video sampling.
-3. **Draft Testing:** Use `steps: 4` on `BasicScheduler` with the **MiniMax H3 Turbo LoRA** and test with `Seconds: 3.5` for sub-90-second feedback loops.
+## ⚡ Fast Video Upscaling (480p to 1080p in 6 Seconds)
+To keep generation fast, render your video drafts in **480p** (~90 seconds per test). Once satisfied with the acting and camera moves:
+- Feed the decoded frames into **`Upscale Image (using Model)`** with **`4x-UltraSharp.pth`**.
+- It upscales the entire video to razor-sharp 1080p/4K in **~5 to 8 seconds** using your GPU's tensor cores without re-running any diffusion!

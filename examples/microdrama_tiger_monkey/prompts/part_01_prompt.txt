@@ -1,0 +1,33 @@
+Style_definitions:
+keep same style,
+tactile 3D cartoon claymation stop-motion aesthetic with visible plasticine thumbprint ridges.
+warm sunny tropical jungle lighting with soft golden rays filtering through clay tree canopies.
+Arri Alexa 35 cinema camera with 50mm prime lens, shallow depth of field, Aardman and Pixar stop-motion quality.
+
+subject_definitions:
+<Subject 1> is Sheru the Tiger in @Image1. Anthropomorphic cartoon tiger walking upright on two legs, wearing a tailored navy blue clay vest with yellow buttons, vibrant orange plasticine body with black clay stripes, cream chest. Unchanged in every shot.
+
+<Subject 2> is the Jungle Clearing location in @Image2. Handcrafted plasticine jungle clearing with a central rustic wooden clay table, two clay stools, palm trees, lush clay greenery, and a cozy round clay hut in the background.
+
+summary:
+[base generation] In a sunlit clay jungle clearing, Sheru the Tiger steps out from his background clay hut, stretching his arms in a lazy morning yawn. He walks upright to the wooden table, sits down on the clay stool, and breathes in the fresh air, speaking happily with warm emotion: "आह... आज का दिन... बहुत ही सुहाना है!"
+
+retention_analysis:
+@Image2 fully preserved - the rustic clay table, stools, and jungle canopy backdrop are reproduced from this image.
+
+detailed_description:
+The environment.
+
+Every defined subject keeps exactly the appearance of its own reference image throughout the video, unchanged and identical on both sides of every cut, without drifting, morphing, or exchanging identity with another subject. Movement throughout is charming, tactile stop-motion claymation with slight stepped keyframe physics and physical weight.
+
+[continuation shot]: At 00:01.000, wide master establishing shot of <Subject 2>, framing the round clay hut in the background and the rustic wooden table with stools in the foreground. <Subject 1> (Sheru) steps out from the hut doorway on two legs, raises both arms in a wide, lazy morning stretch, and lets out a big, expressive cartoon yawn. His striped tail swishes gently behind him.
+
+[continuation shot]: At 00:02.600, <Subject 1> walks at an unhurried, relaxed pace along the dirt path to the wooden table. He pulls out the left clay stool slightly, turns around, and lowers himself comfortably onto the seat, resting his paws on the wooden tabletop.
+
+[continuation shot]: At 00:03.800, medium shot framing <Subject 1> sitting comfortably at the table. He closes his eyes momentarily with a contented sigh, inhales deeply, and in a rich, warm, emotional voice says in Hindi: "आह... आज का दिन... बहुत ही सुहाना है!" His clay jaw and mouth articulate each syllable with natural comedic timing from 00:03.800 to 00:07.100, finishing with a warm, peaceful smile as he looks out over the sunny clearing.
+
+overall_soundscape:
+Chirping cartoon clay jungle birds, the soft rustle of clay leaves in the breeze, light thuds of tiger paws walking on dirt, the muffled scrape of the clay stool, followed by Sheru's rich, emotional Hindi voice echoing peacefully in the clearing.
+
+non_diegetic_music:
+N/A

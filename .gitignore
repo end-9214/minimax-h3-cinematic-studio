@@ -1,0 +1,21 @@
+# Environment and credentials
+.env*
+*.key
+*.pem
+*token*
+*secret*
+*credential*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
